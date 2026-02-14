@@ -1,15 +1,12 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Lexend+Peta:wght@100..900&family=Meow+Script&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +19,35 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+html {
+  overflow: hidden;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.animate-float {
+  animation: float linear infinite;
+}
+
+.zalando {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.delius-regular {
+  font-family: "Delius", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
